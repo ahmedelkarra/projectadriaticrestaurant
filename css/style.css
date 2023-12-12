@@ -1,0 +1,814 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-align: center;
+
+    color: white;
+}
+
+body {
+    background-color: rgb(165, 165, 211);
+    text-transform: capitalize;
+    font-size: 20px;
+}
+
+/* Header */
+
+.header {
+    position: fixed;
+    background-color: rgba(49, 49, 145, 0.745);
+    width: 100%;
+    height: 100px;
+    z-index: 999;
+    overflow: hidden;
+}
+
+.header img {
+    width: 200px;
+    height: 120px;
+    float: left;
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translate(0%, -50%);
+}
+
+.header ul {
+    float: right;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translate(0%, -50%);
+}
+
+.header ul li {
+    position: relative;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.header ul li a {
+    text-decoration: none;
+}
+
+.header ul li::after {
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    bottom: -2px;
+    left: 0;
+    content: "";
+    transition-duration: 300ms;
+    background-color: rgb(165, 165, 211);
+}
+
+.header ul li:hover::after {
+    width: 100%;
+}
+
+/* the main div */
+
+.mainInfo {
+    position: relative;
+    background-image: url(../image/Sea.jpg);
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    height: 100vh;
+    width: 100%;
+}
+
+.mainInfo .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(49, 49, 145, 0.382);
+}
+
+.info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.info button {
+    border-radius: 5px;
+    padding: 10px;
+    border: none;
+    margin-top: 5px;
+    cursor: pointer;
+    padding: 15px;
+    font-size: 18px;
+    background-color: rgb(84, 84, 233);
+}
+
+.info button a {
+    text-decoration: none;
+}
+
+.info button.getStartedButton {
+    background-color: rgb(3, 3, 233);
+}
+
+.info button:hover {
+    color: rgb(214, 205, 205);
+}
+
+/* div for more information */
+
+.moreinfo {
+    position: relative;
+    height: 60vh;
+    width: 100%;
+    background-color: rgba(49, 49, 145, 0.205);
+}
+
+.moreinfo h2 {
+    margin-top: 70px;
+}
+
+.moreInfoAllDiv {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 100px 0px;
+}
+
+.moreInfoAllDiv .infoDivAll {
+    position: relative;
+    display: inline-block;
+    margin: 0px 50px;
+    border: 1px solid;
+    border-radius: 20px;
+    width: 300px;
+    height: 200px;
+    background-color: rgba(49, 49, 145, 0.637);
+}
+
+.infoDivAll * {
+    margin: 3px 0px;
+}
+
+.infoDivAll::after {
+    position: absolute;
+    width: 100%;
+    height: 0;
+    content: "";
+    top: 0;
+    left: 0;
+    border-radius: 20px;
+    background-color: rgba(49, 49, 145, 0.637);
+    opacity: 0;
+    transition-duration: 1s;
+}
+
+.infoDivAll:hover::after {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(49, 49, 145);
+    opacity: .4;
+}
+
+
+
+
+/* mainDishes Div */
+
+.mainDishes {
+    width: 100%;
+    height: 100vh;
+    margin-top: 70px;
+    background-color: rgba(49, 49, 145, 0.205);
+}
+
+
+.mainDishes h2 {
+    margin: 10px 0px;
+}
+
+.dishesDiv {
+    position: relative;
+    display: inline-block;
+    margin: 0px 10px;
+}
+
+.dishesDiv img {
+    width: 400px;
+    height: 300px;
+    border-radius: 20px;
+    margin-top: 2px;
+}
+
+.mainDishesMoreInfo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    z-index: 2;
+    transform: translate(-50%, -50%);
+    transition-duration: 1s;
+}
+
+.dishesDiv:hover .mainDishesMoreInfo {
+    opacity: 1;
+}
+
+.mainDishesMoreInfo ul {
+    margin-top: 15px;
+    text-decoration: none;
+}
+
+.dishesDiv::after {
+    position: absolute;
+    content: "";
+    width: 0%;
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    transition-duration: 1s;
+    border-radius: 20px;
+    background-color: rgb(49, 49, 145)
+}
+
+.dishesDiv:hover::after {
+    width: 100%;
+    height: 100%;
+    opacity: .7;
+}
+
+/* WhatWeOffer Div */
+
+
+.WhatWeOffer {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    margin-top: 70px;
+    background-color: rgba(49, 49, 145, 0.205);
+    overflow: hidden;
+}
+
+.offerContainer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.mainOfferDiv1 {
+    display: inline-block;
+}
+
+.mainOfferDiv2 {
+    display: inline-block;
+}
+
+.mainOfferDiv1 .offer {
+    float: left;
+    position: relative;
+    border: 1px solid;
+    border-radius: 20px;
+    width: 300px;
+    height: 220px;
+    margin: 10px;
+    background-color: rgba(49, 49, 145, 0.637);
+}
+
+.mainOfferDiv2 .offer {
+    float: left;
+    position: relative;
+    border: 1px solid;
+    border-radius: 20px;
+    width: 300px;
+    height: 220px;
+    margin: 10px;
+    background-color: rgba(49, 49, 145, 0.637);
+}
+
+.offerMainContent * {
+    margin: 10px;
+}
+
+.offerMainContent {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+}
+
+.moreInfoPlusHiden {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    transition-duration: 1s;
+    z-index: 2;
+    transform: translate(-50%, 1%);
+}
+
+.moreInfoPlusHiden p {
+    position: relative;
+    display: inline-block;
+    top: 19px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.moreInfoPlusHiden h3 {
+    font-size: 15px;
+}
+
+.offer:hover .moreInfoPlusHiden {
+    opacity: 1;
+}
+
+.offer::after {
+    position: absolute;
+    content: "";
+    width: 0%;
+    height: 25%;
+    bottom: 0;
+    left: 0;
+    border-radius: 20px;
+    transition-duration: 1s;
+    opacity: 0;
+    z-index: 1;
+    background-color: rgb(49, 49, 145);
+}
+
+.offer:hover::after {
+    height: 100%;
+    width: 100%;
+    opacity: .4;
+}
+
+/* why Join Us Div */
+
+.whyJoinUs {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    margin-top: 70px;
+    background-color: rgba(49, 49, 145, 0.205);
+}
+
+.teamphotoDivAll {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.team {
+    position: relative;
+    display: inline-block;
+}
+
+.team1 {
+    position: relative;
+    top: -100px;
+    margin-right: 50px;
+}
+
+.team img {
+    width: 450px;
+    border-radius: 20px;
+}
+
+.teamUl{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.teamUl ul li{
+    float: left;
+    font-size: 26px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.teamUl ul li:hover{
+    color: rgba(49, 49, 145, 0.702);
+}
+
+/* Achievements Div */
+
+
+.achievements {
+    position: relative;
+    height: 60vh;
+    width: 100%;
+    margin-top: 70px;
+    background-image: url(../image/lunch.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0px -100px;
+    background-attachment: fixed;
+}
+
+.achievements .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(41, 41, 144, 0.572);
+}
+
+.achievements .moreInfo {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.eachMoreInfo {
+    display: inline-block;
+    margin: 100px 50px;
+}
+
+.eachMoreInfo .fa-plate-wheat,
+.fa-award,
+.fa-mug-hot,
+.fa-face-smile-wink {
+    margin-bottom: 20px;
+    font-size: 40px;
+}
+
+
+/* Menu Div */
+
+.menuAllDiv {
+    width: 100%;
+    margin-top: 70px;
+    background-color: rgba(49, 49, 145, 0.205);
+}
+
+.mainMenuEachOne {
+    position: relative;
+    margin: 60px 0px;
+}
+
+.MenuEachOne {
+    position: relative;
+    display: inline-block;
+    border: 1px solid;
+    border-radius: 20px;
+    width: 300px;
+    height: 220px;
+    margin: 0px 30px;
+    background-color: rgba(49, 49, 145, 0.637);
+}
+
+.MenuInfo {
+    position: absolute;
+    z-index: 2;
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+}
+
+.MenuInfo h3 {
+    margin: 20px 0px;
+}
+
+.MenuInfo p {
+    display: inline;
+    border: 1px solid;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.MenuInfo ul {
+    margin: 20px;
+}
+
+.MenuInfo ul li {
+    display: block;
+}
+
+.MenuEachOne::after {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    content: "";
+    width: 0;
+    height: 25%;
+    opacity: 0;
+    border-radius: 20px;
+    transition-duration: 1s;
+    z-index: 1;
+    background-color: rgb(49, 49, 145);
+}
+
+.MenuEachOne:hover::after {
+    width: 100%;
+    height: 100%;
+    opacity: .4;
+}
+
+/* Master Chefs Div */
+
+.MasterChefsAllDiv {
+    position: relative;
+    height: 50vh;
+    width: 100%;
+    background-image: url("../image/original.avif");
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+
+.MasterChefsAllDiv .overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: .9;
+    background-color: rgba(41, 41, 144, 0.572);
+}
+
+.masterChefs {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.masterChefsEach {
+    display: inline-block;
+    margin: 0px 60px;
+}
+
+.detals * {
+    position: relative;
+    float: left;
+    top: 20px;
+}
+
+.detals h3 {
+    position: relative;
+    float: left;
+    top: 50px;
+}
+
+.detals img {
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+}
+
+.masterChefsEach ul {
+    position: relative;
+    top: 80px;
+}
+
+.masterChefsEach ul li {
+    display: block;
+    width: 300px;
+}
+
+/* restaurant Branches Div  */
+
+.restaurantBranchesAllDiv {
+    height: 63vh;
+    width: 100%;
+    margin-top: 70px;
+    background-color: rgba(49, 49, 145, 0.205);
+}
+
+.branchesEeachDiv {
+    position: relative;
+    display: inline-block;
+    border: 1px solid;
+    border-radius: 20px;
+    width: 250px;
+    height: 250px;
+    margin: 50px 20px;
+    transition-duration: 1s;
+    background-color: rgba(49, 49, 145, 0.637);
+}
+
+.branchesEeachDiv img {
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+    transition-duration: 1s;
+}
+
+.overlayBranches {
+    position: absolute;
+    display: none;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, 90%);
+    transition-duration: 1s;
+    z-index: 2;
+}
+
+.branchesEeachDiv:hover .overlayBranches {
+    display: block;
+}
+
+.branchesEeachDiv:hover img {
+    height: 70%;
+    width: 77%;
+    border-radius: 0 0 20px 20px;
+}
+
+.addMoreIcon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    transition-duration: 1s;
+    z-index: 2;
+}
+
+.addMoreIcon a {
+    display: block;
+    font-size: 20px;
+    margin: 10px 0px;
+    padding: 5px;
+    border-radius: 50%;
+    background-color: rgba(49, 49, 145, 0.637);
+}
+
+.branchesEeachDiv:hover .addMoreIcon {
+    opacity: 1;
+}
+
+.branchesEeachDiv::after {
+    position: absolute;
+    width: 0%;
+    height: 25%;
+    top: 0;
+    right: 0;
+    content: "";
+    background-color: rgb(49, 49, 145);
+    border-radius: 20px;
+    opacity: 0;
+    z-index: 1;
+    transition-duration: 500ms;
+}
+
+.branchesEeachDiv:hover::after {
+    opacity: .4;
+    height: 100%;
+    width: 100%;
+}
+
+/* New Dishes Div */
+
+.newDishesMainDiv {
+    position: relative;
+    width: 100%;
+    height: 85vh;
+    margin-top: 70px;
+    background-color: rgba(49, 49, 145, 0.205);
+}
+
+.newDishesAllDiv {
+    position: absolute;
+    margin-top: 20px;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.newDishesMoreOptions {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.newDishesEachOneDiv {
+    position: relative;
+    display: inline-block;
+    margin: 0px 20px;
+}
+
+.newDishesEachOneDiv img {
+    display: block;
+    width: 350px;
+    height: 300px;
+    border-radius: 20px;
+}
+
+.newDishesMoreOptions p {
+    display: inline-block;
+    margin: 5px 3px;
+}
+
+.newDishesMoreOptions p * {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.newDishesMoreOptions ul {
+    display: block;
+    margin: 10px 0;
+}
+
+.newDishesMoreOptions ul li {
+    display: block;
+}
+
+.newDishesMoreOptions a {
+    display: block;
+    margin-top: 10px;
+}
+
+.newDishesEachOneDiv::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 20px;
+    content: "";
+    width: 100%;
+    height: 0%;
+    transition-duration: 1s;
+    opacity: 0;
+    z-index: 1;
+    background-color: rgb(49, 49, 145);
+}
+
+.newDishesEachOneDiv:hover::after {
+    height: 100%;
+    width: 100%;
+    opacity: .4;
+}
+
+/* Header Div */
+
+.headerMainDiv {
+    position: relative;
+    width: 100%;
+    height: 45vh;
+    margin-top: 70px;
+    background-color: rgba(49, 49, 145, 0.205);
+}
+
+.headerMoreOptions {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.headerMoreOptions img {
+    width: 300px;
+    height: 150px;
+}
+
+.headerMoreOptions .icons {
+    margin: 20px;
+}
+
+.headerMoreOptions .icons * {
+    display: inline-block;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+.headerMoreOptions .icons .fa-facebook,
+.headerMoreOptions .icons .fa-instagram,
+.headerMoreOptions .icons .fa-x-twitter,
+.headerMoreOptions .icons .fa-youtube,
+.headerMoreOptions .icons .fa-google-plus-g,
+.headerMoreOptions .icons .fa-linkedin {
+    height: 30px;
+    width: 30px;
+    padding: 10px;
+    font-size: 30px;
+    border-radius: 50%;
+    background-color: rgb(0, 98, 189);
+}
+
+.headerMoreOptions .icons .fa-facebook:hover,
+.headerMoreOptions .icons .fa-instagram:hover,
+.headerMoreOptions .icons .fa-x-twitter:hover,
+.headerMoreOptions .icons .fa-youtube:hover,
+.headerMoreOptions .icons .fa-google-plus-g:hover,
+.headerMoreOptions .icons .fa-linkedin:hover {
+    background-color: rgb(0, 128, 255);
+}
+
+.headerMoreOptions>p {
+    text-transform: uppercase;
+}
